@@ -6,5 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Print(day1.CountDepthIncreased([]int{199, 200, 208, 210, 200, 207, 240, 269, 260, 263}))
+	fmt.Printf("result from example given: %d\n", day1.CountDepthIncreasedFromFile("./day1/sample_data.txt"))
+	fmt.Printf("result from my puzzle data: %d\n", day1.CountDepthIncreasedFromFile("./day1/data.txt"))
 }
