@@ -26,13 +26,7 @@ func CountDepthIncreasedFromFile(file string) int {
 		log.Fatal(err)
 	}
 	// only go to second last element with i so we don't go out of bounds
-	count := 0
-	for i := 0; i < len(values)-1; i++ {
-		if values[i] < values[i+1] {
-			count++
-		}
-	}
-	return count
+	return CountDepthIncreased(values)
 }
 
 func readData(file string) ([]int, error) {
