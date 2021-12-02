@@ -1,10 +1,8 @@
 package day1
 
 import (
-	"bufio"
+	"adventofcode/utils"
 	"log"
-	"os"
-	"strconv"
 )
 
 // Counts the number of times a depth measurement increases from the previous measurement
@@ -20,28 +18,11 @@ func CountDepthIncreased(depths []int) int {
 	return count
 }
 
+// Counts the number of times a depth measurement increases from the previous measurement from a file.
 func CountDepthIncreasedFromFile(file string) int {
-	values, err := readData(file)
+	values, err := utils.ReadDataToInts(file)
 	if err != nil {
 		log.Fatal(err)
 	}
-	// only go to second last element with i so we don't go out of bounds
 	return CountDepthIncreased(values)
-}
-
-func readData(file string) ([]int, error) {
-	f, err := os.Open(file)
-	if err != nil {
-		log.Fatal(err)
-	}
-	scanner := bufio.NewScanner(f)
-	values := []int{}
-	for scanner.Scan() {
-		val, err := strconv.Atoi(scanner.Text())
-		if err != nil {
-			return values, err
-		}
-		values = append(values, val)
-	}
-	return values, scanner.Err()
 }
