@@ -31,11 +31,3 @@ func ReadDataToInts(file string) ([]int, error) {
 	}
 	return values, scanner.Err()
 }
-
-func Sum(values []int) int {
-	var sum int
-	for _, val := range values {
-		sum += val
-	}
-	return sum
-}

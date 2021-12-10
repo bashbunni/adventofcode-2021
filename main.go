@@ -13,4 +13,5 @@ func main() {
 		fmt.Printf("%d\n", day1.ThreeMeasurement())
 	*/
 	fmt.Println(day2.Pilot("./day2/sample_data.txt"))
+	fmt.Println(day2.Pilot("./day2/data.txt"))
 }

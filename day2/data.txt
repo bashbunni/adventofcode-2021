@@ -532,7 +532,7 @@ forward 3
 down 6
 down 1
 forward 3
-own 4
+down 4
 up 6
 up 5
 up 7
