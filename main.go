@@ -12,6 +12,6 @@ func main() {
 		fmt.Printf("result from my puzzle data: %d\n", day1.CountDepthIncreasedFromFile("./day1/data.txt"))
 		fmt.Printf("%d\n", day1.ThreeMeasurement())
 	*/
-	fmt.Println(day2.Pilot("./day2/sample_data.txt"))
-	fmt.Println(day2.Pilot("./day2/data.txt"))
+	fmt.Println(day2.PilotWithAim("./day2/sample_data.txt"))
+	fmt.Println(day2.PilotWithAim("./day2/data.txt"))
 }
