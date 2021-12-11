@@ -1,6 +1,7 @@
 package main
 
 import (
+	"adventofcode/day3"
 	"fmt"
 )
 
@@ -19,5 +20,5 @@ func main() {
 	/*
 		DAY3
 	*/
-	fmt.Println("day3")
+	fmt.Println(day3.ProcessReport("./day3/data.txt"))
 }
