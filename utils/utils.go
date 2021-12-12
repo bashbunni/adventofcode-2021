@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func ReadFile(file string) (scanner *bufio.Scanner) {
@@ -30,4 +31,14 @@ func ReadDataToInts(file string) ([]int, error) {
 		values = append(values, val)
 	}
 	return values, scanner.Err()
+}
+
+func ConvertDataTo2DArray(file string) [][]string {
+	var report [][]string
+	scanner := ReadFile(file)
+	for scanner.Scan() {
+		row := strings.Split(scanner.Text(), "")
+		report = append(report, row)
+	}
+	return report
 }

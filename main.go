@@ -20,5 +20,6 @@ func main() {
 	/*
 		DAY3
 	*/
-	fmt.Println(day3.ProcessReport("./day3/data.txt"))
+	fmt.Println(day3.CalculateLifeSupportRating("./day3/sample_data.txt"))
+	fmt.Println(day3.CalculateLifeSupportRating("./day3/data.txt"))
 }
